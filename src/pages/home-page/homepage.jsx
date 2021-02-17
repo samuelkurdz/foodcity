@@ -1,20 +1,22 @@
 import React from 'react';
 import './homepage.scss';
 import Dish from '../../assets/images/dish.png';
+import CustomButton from '../../components/custom-button/custom-button';
 
 
 function HomePage() {
   return (
     <div className="home-page">
-      <div className="banner-field">
-        <p>
-          Your favourite food delivered to you
+      <div className="banner-text-field">
+        <p className="banner-big-text">
+          Your <span>favourite</span> food delivered <span>to you</span>
         </p>
-        <span>Order your food at any time and we will
+        <p className="banner-small-text">Order your food at any time and we will
           deliver them directly to your home.
-        </span>
+        </p>
+        <CustomButton buttonText='Make an Order' buttonType='accent-outline' />
       </div>
-      <img src={Dish} alt="dish" />
+      <img className="banner-image" src={Dish} alt="dish" />
     </div>
   );
 }

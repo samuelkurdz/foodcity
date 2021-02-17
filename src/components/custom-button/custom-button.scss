@@ -1,0 +1,35 @@
+button {
+  font-family: "Open Sans";
+  font-size: 15.5px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 9px 18px;
+  border: none;
+  transition: all 0.3s;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.accent {
+  color: #ff8144;
+  background-color: white;
+  border: 1px solid #ff8144;
+
+  &:hover {
+    background-color: #ff8144;
+    color: white;
+  }
+}
+
+.accent-outline {
+  background-color: #ff8144;
+  color: white;
+  border: 1px solid #ff8144;
+
+  &:hover {
+    color: #ff8144;
+    background-color: white;
+  }
+}

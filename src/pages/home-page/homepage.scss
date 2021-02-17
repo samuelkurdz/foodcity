@@ -1,5 +1,60 @@
 .home-page {
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-around;
+
+  .banner-text-field {
+    max-width: 450px;
+    align-self: center;
+
+    .banner-big-text {
+      font-size: 45px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      span {
+        color: #ff8144;
+      }
+    }
+
+    .banner-small-text {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .home-page {
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+
+    .banner-image {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page {
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+  }
+  .banner-text-field {
+    text-align: center;
+
+    .banner-big-text {
+      font-size: 30px !important;
+    }
+
+    .banner-small-text {
+      font-size: 15px;
+    }
+  }
+
+  .banner-image {
+    width: 300px;
+  }
 }
