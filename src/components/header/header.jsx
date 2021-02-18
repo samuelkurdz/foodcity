@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from '../custom-button/custom-button';
 import './header.scss';
 
 // import { Link } from 'react-router-dom';
@@ -12,7 +13,7 @@ const Header = () => {
         <span className="header-link">Locations</span>
         <span className="header-link">Our Story</span>
         <span className="header-link">Cart</span>
-        <button>Order Now</button>
+        <CustomButton buttonText='Order Now' buttonType='accent'/>
       </div>
     </div>
   )

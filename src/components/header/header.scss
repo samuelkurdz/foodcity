@@ -1,8 +1,8 @@
 .header {
   font-family: "Open Sans";
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
 
   h3 {
     font-size: 18px;
@@ -15,25 +15,13 @@
       margin-right: 40px;
     }
   }
+}
 
-  button {
-    font-family: "Open Sans";
-    font-size: 15.5px;
-    color: #ff8144;
-    background-color: white;
-    border: 1px solid #ff8144;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 9px 18px;
-    transition: all 0.3s;
-
-    &:hover {
-      background-color: #ff8144;
-      color: white;
-    }
-
-    &:focus {
-      border: none;
-    }
+@media (max-width: 760px) {
+  h3 {
+    margin-left: 20px;
+  }
+  .header-links {
+    visibility: hidden;
   }
 }

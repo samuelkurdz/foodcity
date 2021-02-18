@@ -1,20 +1,14 @@
 import React from 'react';
+import Banner from '../../components/banner/banner';
+import GuideCardList from '../../components/guide-card-list/guide-card-list';
 import './homepage.scss';
-import Dish from '../../assets/images/dish.png';
 
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div className="home-page">
-      <div className="banner-field">
-        <p>
-          Your favourite food delivered to you
-        </p>
-        <span>Order your food at any time and we will
-          deliver them directly to your home.
-        </span>
-      </div>
-      <img src={Dish} alt="dish" />
+      <Banner />
+      <GuideCardList />
     </div>
   );
 }
