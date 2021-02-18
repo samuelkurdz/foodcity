@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../../components/banner/banner';
-import GuideCard from '../../components/guide-card/guide-card';
+import GuideCardList from '../../components/guide-card-list/guide-card-list';
 import './homepage.scss';
 
 
@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Banner />
-      <GuideCard />
+      <GuideCardList />
     </div>
   );
 }
