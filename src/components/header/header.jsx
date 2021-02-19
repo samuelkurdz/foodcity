@@ -19,6 +19,7 @@ const Header = () => {
   return (
     <div className="header">
       <h3>FoodCity</h3>
+      {/* if page is wide(>800px), display links else display hamburger */}
       { isPageWide ?
         (
           <div className="header-links">
@@ -37,14 +38,17 @@ const Header = () => {
           </div>
         </div>
       }
-      <div id="myNav" ref={overLay} className="overlay">
-        <div className="overlay-content">
-          <span className="overlay-link">Menu</span>
-          <span className="overlay-link">Our Story</span>
-          <span className="overlay-link">Locations</span>
-          <span className="overlay-link">Cart</span>
+      {/*  display overlay only when page is not wide i.e more than 800px */}
+      { !isPageWide &&
+        <div id="myNav" ref={overLay} className="overlay">
+          <div className="overlay-content">
+            <span className="overlay-link">Menu</span>
+            <span className="overlay-link">Our Story</span>
+            <span className="overlay-link">Locations</span>
+            <span className="overlay-link">Cart</span>
+          </div>
         </div>
-      </div>
+      }
     </div>
   )
 }
