@@ -17,27 +17,27 @@
   }
 }
 
-@media (max-width: 760px) {
-  h3 {
-    margin-left: 20px;
+// hamburger stylings
+
+#menu {
+  z-index: 2;
+
+  #pencet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      background-color: #ff8144;
+      width: 2em;
+      height: 0.2em;
+      margin: 0.26em 0;
+      display: block;
+      transition: all 0.4s ease;
+      transform-origin: 0 0;
+    }
   }
-}
-
-#pencet {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-#pencet span {
-  background-color: #ff8144;
-  width: 2em;
-  height: 0.2em;
-  margin: 0.26em 0;
-  display: block;
-  transition: all 0.4s ease;
-  transform-origin: 0 0;
 }
 
 .Diam span:nth-child(1) {
@@ -50,4 +50,52 @@
 
 .Diam span:nth-child(3) {
   transform: rotate(-45deg) translate(1px, 0);
+}
+
+// overlay styling
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(251, 251, 251, 0.5);
+  backdrop-filter: blur(3px);
+  overflow-y: hidden;
+  transition: 0.5s;
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .overlay-link {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 28px;
+      color: #ff8144;
+      display: block;
+      transition: 0.5s;
+
+      &:hover,
+      &:focus {
+        color: #f1f1f1;
+        background-color: #ff8144;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.overlay-opened {
+  height: 100%;
+}
+
+.navOpenBodyUnscrollable {
+  overflow: hidden;
 }
