@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '../../components/banner/banner';
 import GuideCardList from '../../components/guide-card-list/guide-card-list';
+import HomePageMenu from '../../components/homepage-menu/homepage-menu';
+import ServiceHoursList from '../../components/service-hours/service-hours';
 import './homepage.scss';
 
 
@@ -9,6 +11,8 @@ const HomePage = () => {
     <div className="home-page">
       <Banner />
       <GuideCardList />
+      <ServiceHoursList />
+      <HomePageMenu />
     </div>
   );
 }
