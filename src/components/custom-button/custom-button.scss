@@ -1,6 +1,6 @@
 button {
   font-family: "Open Sans";
-  font-size: 15.5px;
+  font-size: 15px;
   border-radius: 3px;
   cursor: pointer;
   padding: 9px 18px;
@@ -31,5 +31,23 @@ button {
   &:hover {
     color: #ff8144;
     background-color: white;
+  }
+}
+
+.primary {
+  background-color: #4353ff;
+  color: #fff;
+
+  &:hover {
+    background-color: #3545ee;
+  }
+}
+
+.primary-soft {
+  background-color: rgba(67, 83, 255, 0.1);
+  color: #4353ff;
+
+  &:hover {
+    background-color: rgba(67, 83, 255, 0.14);
   }
 }
