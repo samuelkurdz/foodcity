@@ -26,7 +26,6 @@ const ServiceHoursList = () => {
       <div className="service-hours-list">
       {
           data.map(({...serviceCardProps}, index) => (
-              // <GuideCard {...guideCardProps} key={index} />
               <ServiceHourCard {...serviceCardProps} key={index} />
             ))
         }
