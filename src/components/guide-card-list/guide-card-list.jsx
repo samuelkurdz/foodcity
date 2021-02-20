@@ -27,13 +27,15 @@ const GuideCardList = () => {
   ]
 
   return (
-    <div className="guide-card-list">
-      {/* <h2>Here's How It Works</h2> */}
-      {
-        data.map(({...guideCardProps}, index) => (
-            <GuideCard {...guideCardProps} key={index} />
-          ))
-      }
+    <div className="guide-container">
+      <h2 className="guide-container-title">Here's How It Works</h2>
+      <div className="guide-card-list">
+        {
+          data.map(({...guideCardProps}, index) => (
+              <GuideCard {...guideCardProps} key={index} />
+            ))
+        }
+      </div>
     </div>
   );
 }
