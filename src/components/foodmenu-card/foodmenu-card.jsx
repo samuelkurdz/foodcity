@@ -11,7 +11,10 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
       </div>
       <div className="food-card-footer">
         <div className="food-price">{price}</div>
-        <div className="food-action">Click Me</div>
+        <div className="food-action" title="add to cart">
+          <span className="action-hortizontal"></span>
+          <span className="action-vertical"></span>
+        </div>
       </div>
     </div>
   );
