@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="footer-column">
           <p className="footer-column-header">Company</p>
           <div className="footer-column-links">
-            <a className="footer-column-link" href="#">Our Story</a>
-            <a className="footer-column-link" href="#">Our Menu</a>
-            <a className="footer-column-link" href="#">Locations</a>
+            <span className="footer-column-link">Our Story</span>
+            <span className="footer-column-link">Our Menu</span>
+            <span className="footer-column-link">Locations</span>
           </div>
         </div>
         <div className="footer-column">

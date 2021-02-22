@@ -20,5 +20,30 @@
   .food-card-footer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+
+    .food-action {
+      width: 30px;
+      height: 30px;
+      background: #ff8144;
+      border-radius: 50%;
+      position: relative;
+      .action-hortizontal {
+        position: absolute;
+        left: 5px;
+        right: 4px;
+        top: 50%;
+        border: 1px solid #ffffff;
+      }
+
+      .action-vertical {
+        position: absolute;
+        left: 50%;
+        // right: 0;
+        top: 4px;
+        bottom: 4px;
+        border: 1px solid #ffffff;
+      }
+    }
   }
 }
