@@ -1,6 +1,8 @@
 import React from 'react';
 import './footer.scss';
-
+import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
+import { ReactComponent as WhatsApp } from '../../assets/icons/whatsapp.svg';
+import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg';
 
 const Footer = () => {
   return (
@@ -19,8 +21,10 @@ const Footer = () => {
           <div className="footer-column-links">
             <a className="footer-column-link" href="mailto:Foodcity@gmail.com">Foodcity@gmail.com</a>
             <a className="footer-column-link" href="tel:08183352687">08183352687</a>
-            <span className="footer-column-link">
-              social media icons
+            <span className="footer-social-links-list">
+              <Twitter className="footer-social-link twitter" />
+              <WhatsApp className="footer-social-link whatsapp" />
+              <Facebook className="footer-social-link facebook" />
             </span>
           </div>
         </div>

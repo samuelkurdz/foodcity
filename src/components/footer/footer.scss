@@ -44,4 +44,32 @@
     justify-content: center !important;
     padding-left: 10px;
   }
+
+  .footer-social-links-list {
+    justify-content: flex-start;
+  }
+}
+
+.footer-social-links-list {
+  display: flex;
+  gap: 8px;
+
+  .footer-social-link {
+    fill: white;
+    width: 25px;
+    height: 25px;
+    transition: 0.4s;
+
+    &:hover {
+      &.twitter {
+        fill: rgb(22, 174, 224);
+      }
+      &.whatsapp {
+        fill: lightgreen;
+      }
+      &.facebook {
+        fill: rgb(72, 72, 209);
+      }
+    }
+  }
 }
