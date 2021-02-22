@@ -22,14 +22,14 @@ export function useFoodMenu() {
       price: 1000,
       imgUrl: PanCakes,
       rating: 4.0,
-      category: ['breakfast', 'lunch']
+      category: ['breakfast', 'lunch', 'dessert']
     },
     {
       name: 'Pap',
       price: 800,
       imgUrl: Pap,
       rating: 3.5,
-      category: ['breakfast']
+      category: ['breakfast', 'dessert']
     },
     {
       name: 'Jollof rice and chicken',
