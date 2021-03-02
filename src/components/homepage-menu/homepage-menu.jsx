@@ -8,7 +8,7 @@ const HomePageMenu = () => {
     <div className="home-page-menu">
       <h2 className="home-page-menu-title">Our Menu</h2>
       <div className="menu-links">
-        <span className="menu-link" onClick={() => setMenuInDisplay('breakfast')}>Breakfast</span>
+        <span className="menu-link active" onClick={() => setMenuInDisplay('breakfast')}>Breakfast</span>
         <span className="menu-link" onClick={() => setMenuInDisplay('lunch')}>Lunch</span>
         <span className="menu-link" onClick={() => setMenuInDisplay('dinner')}>Dinner</span>
         <span className="menu-link" onClick={() => setMenuInDisplay('dessert')}>Desert</span>

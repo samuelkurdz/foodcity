@@ -4,8 +4,13 @@
   width: 300px;
   margin: 1rem;
   background-color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 64px -16px rgba(46, 55, 77, 0.1);
   border-radius: 10px;
+  transition: 240ms box-shadow;
+
+  &:hover {
+    box-shadow: 0 16px 64px -16px rgba(46, 55, 77, 0.24);
+  }
 
   .food-card-image {
     width: 100%;
@@ -38,9 +43,8 @@
 
       .action-vertical {
         position: absolute;
-        left: 50%;
-        // right: 0;
-        top: 4px;
+        left: 51%;
+        top: 6px;
         bottom: 4px;
         border: 1px solid #ffffff;
       }

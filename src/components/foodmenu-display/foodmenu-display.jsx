@@ -8,7 +8,7 @@ const MenuDisplay = ({menuInDisplay}) => {
   return (
     <div className="menu-list">
       {
-        foodData.filter(food => food.category.includes(menuInDisplay))
+        foodData.filter(food => food.category.includes(menuInDisplay)).slice(0,3)
                 .map(({...otherFoodProps}, index) => {
           return <FoodCard key={index} {...otherFoodProps} />
         })
