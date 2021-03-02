@@ -14,7 +14,6 @@ const Header = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
     document.body.classList.toggle('navOpenBodyUnscrollable');
     overLay.current.classList.toggle('overlay-opened');
-    console.log(overLay);
   }
 
   return (
@@ -27,7 +26,13 @@ const Header = () => {
             <span className="header-link">Menu</span>
             <span className="header-link">Locations</span>
             <span className="header-link">Our Story</span>
-            <span className="header-link">Cart</span>
+            {/* <span className="header-link">Cart</span> */}
+            <span className="cart" aria-label="View your shopping cart">
+              <i className="fas fa fa-shopping-cart fa-lg"></i>
+              <span className="cart-basket">
+                0
+              </span>
+            </span>
             <CustomButton buttonText='Order Now' buttonType='accent'/>
           </div>
         ) :
