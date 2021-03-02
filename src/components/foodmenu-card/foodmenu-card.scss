@@ -17,19 +17,27 @@
     height: 270px;
   }
 
+  .food-card-rating {
+    display: flex;
+    gap: 1rem;
+    margin-top: px;
+    align-items: center;
+  }
+
   .food-card-body,
   .food-card-footer {
-    padding: 12px 1rem;
+    padding: 4px 1rem;
   }
 
   .food-card-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 8px;
 
     .food-action {
-      width: 30px;
-      height: 30px;
+      width: 27px;
+      height: 27px;
       background: #ff8144;
       border-radius: 50%;
       position: relative;
