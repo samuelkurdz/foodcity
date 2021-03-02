@@ -28,7 +28,7 @@ export function useFoodMenu() {
       name: 'Pap',
       price: 800,
       imgUrl: Pap,
-      rating: 3.5,
+      rating: 2,
       category: ['breakfast', 'dessert']
     },
     {
