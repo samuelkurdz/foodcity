@@ -14,6 +14,7 @@ const Header = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
     document.body.classList.toggle('navOpenBodyUnscrollable');
     overLay.current.classList.toggle('overlay-opened');
+    console.log(overLay);
   }
 
   return (

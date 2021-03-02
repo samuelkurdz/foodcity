@@ -22,7 +22,7 @@ export function useFoodMenu() {
       price: 1000,
       imgUrl: PanCakes,
       rating: 4.0,
-      category: ['breakfast', 'lunch', 'dessert']
+      category: ['breakfast', 'dessert', 'lunch']
     },
     {
       name: 'Pap',
@@ -30,13 +30,6 @@ export function useFoodMenu() {
       imgUrl: Pap,
       rating: 3.5,
       category: ['breakfast', 'dessert']
-    },
-    {
-      name: 'Jollof rice and chicken',
-      price: 2000,
-      imgUrl: JollofChicken,
-      rating: 3.5,
-      category: ['breakfast', 'lunch', 'dinner']
     },
     {
       name: 'Pizza',
@@ -51,6 +44,13 @@ export function useFoodMenu() {
       imgUrl: CupCakes,
       rating: 4.5,
       category: ['lunch', 'dessert']
+    },
+    {
+      name: 'Jollof rice and chicken',
+      price: 2000,
+      imgUrl: JollofChicken,
+      rating: 3.5,
+      category: ['breakfast', 'dinner', 'lunch']
     },
     {
       name: 'Beef jerky',

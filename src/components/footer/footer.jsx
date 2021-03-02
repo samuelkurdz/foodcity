@@ -32,7 +32,7 @@ const Footer = () => {
           <p className="footer-column-header">Address</p>
           <div className="footer-column-links">
             <span className="footer-column-link">
-              10, apapa road, Power line, Lekki.
+              10, Apapa Road, Power line, Lekki.
             </span>
           </div>
         </div>
