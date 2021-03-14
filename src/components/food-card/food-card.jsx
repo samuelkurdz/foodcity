@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { addItemToCart } from "../../redux/cart/cart.actions";
 import StarRating from "../star-rating/star-rating";
 import './food-card.scss';
 
-const FoodCard = ({ name, imgUrl, rating, price, isRatingEditable }) => {
+const FoodCard = ({ foodItem, isRatingEditable, addItem: addItemToCart }) => {
+  const { name, imgUrl, rating, price } = foodItem;
   const [starRate, setStarRate] = useState(rating);
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const FoodCard = ({ name, imgUrl, rating, price, isRatingEditable }) => {
       </div>
       <div className="food-card-footer">
         <div className="food-price">#{price}</div>
-        <button className="food-action-button" title="add to cart">
+        <button className="food-action-button" onClick={() => addItemToCart(foodItem)}>
           <span className="food-action-add">&#43;</span>
         </button>
       </div>
@@ -40,4 +43,8 @@ const FoodCard = ({ name, imgUrl, rating, price, isRatingEditable }) => {
   );
 }
 
-export default FoodCard;
+const mapDispatchToProps = (dispatch) => ({
+  addItemToCart : (item) => dispatch(addItemToCart(item))
+});
+
+export default connect(null, mapDispatchToProps)(FoodCard);

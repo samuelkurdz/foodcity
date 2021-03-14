@@ -9,8 +9,8 @@ const MenuDisplay = ({menuInDisplay}) => {
     <div className="preview-menu-list">
       {
         foodData.filter(food => food.category.includes(menuInDisplay)).slice(0,3)
-                .map(({...otherFoodProps}, index) => {
-          return <FoodCard key={index} isRatingEditable={false} {...otherFoodProps} />
+                .map((foodItem) => {
+          return <FoodCard key={foodItem.id} isRatingEditable={false} foodItem={foodItem} />
         })
       }
     </div>
