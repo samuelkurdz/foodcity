@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../../components/banner/banner';
 import GuideCardList from '../../components/guide-container/guide-container';
 import MenuPreview from '../../components/preview-menu/preview-menu';
-import ServiceHoursList from '../../components/service-hours/service-hours';
+import ServiceHoursContainer from '../../components/service-hours-container/service-hours-container';
 import './homepage.scss';
 
 
@@ -11,7 +11,7 @@ const HomePage = () => {
     <div className="home-page">
       <Banner />
       <GuideCardList />
-      <ServiceHoursList />
+      <ServiceHoursContainer />
       <MenuPreview />
     </div>
   );
