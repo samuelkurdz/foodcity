@@ -15,9 +15,9 @@ const CartModal = ({toggleCartVisiblity}) => {
     <Fragment>
       <div className="modal-overlay is-visible" id="modal-overlay"></div>
       <div className="modal is-visible" id="modal">
-        <button className="modal-close-btn" id="close-btn" onClick={hideCartModal}>
+        <span className="modal-close-btn" tabIndex="0" role="button" id="close-btn" onClick={hideCartModal}>
           <i className="fa fa-times"></i>
-        </button>
+        </span>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Ab suscipit doloremque sequi, labore perspiciatis,

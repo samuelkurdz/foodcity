@@ -10,7 +10,7 @@ const MenuDisplay = ({menuInDisplay}) => {
       {
         foodData.filter(food => food.category.includes(menuInDisplay)).slice(0,3)
                 .map(({...otherFoodProps}, index) => {
-          return <FoodCard key={index} {...otherFoodProps} />
+          return <FoodCard key={index} isRatingEditable={false} {...otherFoodProps} />
         })
       }
     </div>

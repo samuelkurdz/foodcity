@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import StarRating from "../star-rating/star-rating";
 import './food-card.scss';
 
-const FoodCard = ({ name, imgUrl, rating, price }) => {
+const FoodCard = ({ name, imgUrl, rating, price, isRatingEditable }) => {
   const [starRate, setStarRate] = useState(rating);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
   };
 
   return (
-    <div className="food-card">
+    <div className="food-card" tabIndex="0" role="button">
       <img className="food-card-image" src={imgUrl} alt="foodImage" />
       <div className="food-card-body">
         <div className="food-card-title">{name}</div>
@@ -25,6 +25,7 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
             numberOfStars="5"
             currentRating={starRate}
             setRatingOnStarClick={resetRatingOnStarClick}
+            isRatingEditable={isRatingEditable}
           />
           {starRate}
         </div>

@@ -13,7 +13,7 @@ const CartIcon = ({itemCount, toggleCartVisiblity}) => {
   }
 
   return (
-    <div className="cart-icon" aria-label="View your shopping cart" onClick={displayCartModal}>
+    <div className="cart-icon" tabIndex="0" role="button" onClick={displayCartModal}>
       <i className="fas fa fa-shopping-cart fa-lg"></i>
       <span className="cart-basket">
         {itemCount}

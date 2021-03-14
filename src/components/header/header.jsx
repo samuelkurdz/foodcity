@@ -27,13 +27,13 @@ const Header = ({hidden}) => {
       { isPageWide ?
         (
           <div className="header-links">
-            <span className="header-link">Menu</span>
-            <span className="header-link">Locations</span>
-            <span className="header-link">Our Story</span>
+            <span className="header-link" tabIndex="0" role="button">Menu</span>
+            <span className="header-link" tabIndex="0" role="button">Locations</span>
+            <span className="header-link" tabIndex="0" role="button">Our Story</span>
             <CartIcon />
           </div>
         ) :
-        <div id="menu" onClick={openNavigation}>
+        <div id="menu" onClick={openNavigation} tabIndex="0" role="button">
           <div id="pencet" className={`${isHamburgerOpen ? 'Diam': ''}`}>
             <span></span>
             <span></span>
@@ -45,10 +45,10 @@ const Header = ({hidden}) => {
       { !isPageWide &&
         <div id="myNav" ref={overLay} className="overlay">
           <div className="overlay-content">
-            <span className="overlay-link">Menu</span>
-            <span className="overlay-link">Our Story</span>
-            <span className="overlay-link">Locations</span>
-            <span className="overlay-link">Cart</span>
+            <span className="overlay-link" tabIndex="0" role="button">Menu</span>
+            <span className="overlay-link" tabIndex="0" role="button">Our Story</span>
+            <span className="overlay-link" tabIndex="0" role="button">Locations</span>
+            <span className="overlay-link" tabIndex="0" role="button">Cart</span>
           </div>
         </div>
       }
