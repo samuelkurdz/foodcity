@@ -4,7 +4,8 @@ import { addItemToCart } from "../../redux/cart/cart.actions";
 import StarRating from "../star-rating/star-rating";
 import './food-card.scss';
 
-const FoodCard = ({ foodItem, isRatingEditable, addItem: addItemToCart }) => {
+const FoodCard = ({ foodItem, isRatingEditable, addItemToCart }) => {
+
   const { name, imgUrl, rating, price } = foodItem;
   const [starRate, setStarRate] = useState(rating);
 
