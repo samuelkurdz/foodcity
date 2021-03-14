@@ -1,16 +1,19 @@
 import React, { useState, useRef } from 'react';
+import { selectCartVisibility } from '../../redux/cart/cart.selectors';
+import { createStructuredSelector } from 'reselect';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import CartIcon from '../cart-icon/cart-icon';
-import CustomButton from '../custom-button/custom-button';
+import CartModal from '../cart-modal/cart-modal';
 import './header.scss';
+import { connect } from 'react-redux';
 
 // import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({hidden}) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   let overLay = useRef();
-
   let isPageWide = useMediaQuery('(min-width: 800px)');
+
   const openNavigation = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
     document.body.classList.toggle('navOpenBodyUnscrollable');
@@ -28,7 +31,6 @@ const Header = () => {
             <span className="header-link">Locations</span>
             <span className="header-link">Our Story</span>
             <CartIcon />
-            <CustomButton buttonText='Order Now' buttonType='accent'/>
           </div>
         ) :
         <div id="menu" onClick={openNavigation}>
@@ -50,8 +52,17 @@ const Header = () => {
           </div>
         </div>
       }
+      {
+        !hidden ?
+        (<CartModal />) :
+        null
+      }
     </div>
   )
 }
 
-export default Header;
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartVisibility,
+})
+
+export default connect(mapStateToProps, null)(Header);
