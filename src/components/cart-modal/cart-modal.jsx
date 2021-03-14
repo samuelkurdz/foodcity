@@ -5,11 +5,17 @@ import { toggleHiddenState } from '../../redux/cart/cart.actions';
 import './cart-modal.scss';
 
 const CartModal = ({toggleCartVisiblity}) => {
+
+  const hideCartModal = () => {
+    document.body.classList.toggle('navOpenBodyUnscrollable');
+    toggleCartVisiblity();
+  }
+
   return (
     <Fragment>
       <div className="modal-overlay is-visible" id="modal-overlay"></div>
       <div className="modal is-visible" id="modal">
-        <button className="modal-close-btn" id="close-btn" onClick={toggleCartVisiblity}>
+        <button className="modal-close-btn" id="close-btn" onClick={hideCartModal}>
           <i className="fa fa-times"></i>
         </button>
         <p>
