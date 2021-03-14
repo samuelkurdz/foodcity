@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StarRating from "../star-rating/star-rating";
-import './foodmenu-card.scss';
+import './food-card.scss';
 
 const FoodCard = ({ name, imgUrl, rating, price }) => {
   const [starRate, setStarRate] = useState(rating);

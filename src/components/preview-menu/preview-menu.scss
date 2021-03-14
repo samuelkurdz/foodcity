@@ -1,17 +1,17 @@
-.home-page-menu {
-  .home-page-menu-title {
+.preview-menu-container {
+  .preview-menu-title {
     text-align: center;
     color: #ff8144;
   }
 
-  .menu-links {
+  .preview-menu-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
     margin: 1rem 0;
 
-    .menu-link {
+    .preview-menu-link {
       font-size: 18.5px;
       cursor: pointer;
       padding: 5px;
