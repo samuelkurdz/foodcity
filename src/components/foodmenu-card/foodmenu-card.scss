@@ -35,26 +35,19 @@
     align-items: flex-end;
     margin-bottom: 8px;
 
-    .food-action {
+    .food-action-button {
       width: 27px;
       height: 27px;
+      padding: 0 !important;
       background: #ff8144;
       border-radius: 50%;
-      position: relative;
-      .action-hortizontal {
-        position: absolute;
-        left: 5px;
-        right: 4px;
-        top: 50%;
-        border: 1px solid #ffffff;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      .action-vertical {
-        position: absolute;
-        left: 51%;
-        top: 6px;
-        bottom: 4px;
-        border: 1px solid #ffffff;
+      .food-action-add {
+        font-size: 35px;
+        color: white;
       }
     }
   }
