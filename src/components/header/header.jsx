@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useMediaQuery } from '../../utils/useMediaQuery';
+import CartIcon from '../cart-icon/cart-icon';
 import CustomButton from '../custom-button/custom-button';
 import './header.scss';
 
@@ -26,12 +27,7 @@ const Header = () => {
             <span className="header-link">Menu</span>
             <span className="header-link">Locations</span>
             <span className="header-link">Our Story</span>
-            <span className="cart" aria-label="View your shopping cart">
-              <i className="fas fa fa-shopping-cart fa-lg"></i>
-              <span className="cart-basket">
-                0
-              </span>
-            </span>
+            <CartIcon />
             <CustomButton buttonText='Order Now' buttonType='accent'/>
           </div>
         ) :
