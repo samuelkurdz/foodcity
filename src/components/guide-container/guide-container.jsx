@@ -1,5 +1,5 @@
 import React from 'react';
-import './guide-card-list.scss';
+import './guide-container.scss';
 
 import Meal from '../../assets/images/choose-meal.png';
 import Delivery from '../../assets/images/delivery.png';
@@ -29,7 +29,7 @@ const GuideCardList = () => {
   return (
     <div className="guide-container">
       <h2 className="guide-container-title">Here's How It Works</h2>
-      <div className="guide-card-list">
+      <div className="guide-list">
         {
           data.map(({...guideCardProps}, index) => (
               <GuideCard {...guideCardProps} key={index} />

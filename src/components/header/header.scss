@@ -124,27 +124,3 @@
 .navOpenBodyUnscrollable {
   overflow: hidden;
 }
-
-.cart {
-  font-size: 1.1rem;
-  color: #343a40;
-  position: relative;
-  display: inline-flex;
-  margin-right: 40px;
-  cursor: pointer;
-
-  .cart-basket {
-    font-size: 0.6rem;
-    position: absolute;
-    top: -6px;
-    right: -5px;
-    width: 15px;
-    height: 15px;
-    color: #fff;
-    background-color: #ff8144;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
