@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from '../../components/banner/banner';
 import GuideCardList from '../../components/guide-container/guide-container';
-import HomePageMenu from '../../components/homepage-menu/homepage-menu';
-import ServiceHoursList from '../../components/service-hours/service-hours';
+import MenuPreview from '../../components/preview-menu/preview-menu';
+import ServiceHoursContainer from '../../components/service-hours-container/service-hours-container';
 import './homepage.scss';
 
 
@@ -11,8 +11,8 @@ const HomePage = () => {
     <div className="home-page">
       <Banner />
       <GuideCardList />
-      <ServiceHoursList />
-      <HomePageMenu />
+      <ServiceHoursContainer />
+      <MenuPreview />
     </div>
   );
 }

@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { addItemToCart } from "../../redux/cart/cart.actions";
 import StarRating from "../star-rating/star-rating";
-import './foodmenu-card.scss';
+import './food-card.scss';
 
-const FoodCard = ({ name, imgUrl, rating, price }) => {
+const FoodCard = ({ foodItem, isRatingEditable, addItemToCart }) => {
+
+  const { name, imgUrl, rating, price } = foodItem;
   const [starRate, setStarRate] = useState(rating);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
   };
 
   return (
-    <div className="food-card">
+    <div className="food-card" tabIndex="0" role="button">
       <img className="food-card-image" src={imgUrl} alt="foodImage" />
       <div className="food-card-body">
         <div className="food-card-title">{name}</div>
@@ -25,13 +29,14 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
             numberOfStars="5"
             currentRating={starRate}
             setRatingOnStarClick={resetRatingOnStarClick}
+            isRatingEditable={isRatingEditable}
           />
           {starRate}
         </div>
       </div>
       <div className="food-card-footer">
         <div className="food-price">#{price}</div>
-        <button className="food-action-button" title="add to cart">
+        <button className="food-action-button" onClick={() => addItemToCart(foodItem)}>
           <span className="food-action-add">&#43;</span>
         </button>
       </div>
@@ -39,4 +44,8 @@ const FoodCard = ({ name, imgUrl, rating, price }) => {
   );
 }
 
-export default FoodCard;
+const mapDispatchToProps = (dispatch) => ({
+  addItemToCart : (item) => dispatch(addItemToCart(item))
+});
+
+export default connect(null, mapDispatchToProps)(FoodCard);

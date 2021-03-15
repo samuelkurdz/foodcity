@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './star-rating.scss';
 
 
-const StarRating = ({currentRating, numberOfStars, setRatingOnStarClick}) => {
+const StarRating = ({currentRating, numberOfStars, setRatingOnStarClick, isRatingEditable}) => {
   let starRate = useRef();
 
   useEffect(() => {
@@ -25,26 +25,53 @@ const StarRating = ({currentRating, numberOfStars, setRatingOnStarClick}) => {
   };
 
   return (
-    <div
-      className="rating"
-      ref={starRate}
-      data-rating={currentRating}
-      onMouseOut={setRating}
-    >
-      {[...Array(+numberOfStars).keys()].map(n => {
-        return (
-          <span
-            className="star"
-            key={n+1}
-            data-value={n+1}
-            onMouseOver={hoverHandler}
-            onClick={setRatingOnStarClick}
+    <>
+      {
+        isRatingEditable ?
+        (
+          <div
+          className="rating"
+          ref={starRate}
+          data-rating={currentRating}
+          onMouseOut={setRating}
           >
-            &#9733;
-          </span>
-        );
-      })}
-    </div>
+            {[...Array(+numberOfStars).keys()].map(n => {
+              return (
+                <span
+                  className="star"
+                  key={n+1}
+                  data-value={n+1}
+                  onMouseOver={hoverHandler}
+                  onClick={setRatingOnStarClick}
+                >
+                  &#9733;
+                </span>
+              );
+            })}
+          </div>
+        ) :
+        (
+          <div
+          className="rating"
+          ref={starRate}
+          data-rating={currentRating}
+          onMouseOut={setRating}
+        >
+          {[...Array(+numberOfStars).keys()].map(n => {
+            return (
+              <span
+                className="star non-editable-star"
+                key={n+1}
+                data-value={n+1}
+              >
+                &#9733;
+              </span>
+            );
+          })}
+        </div>
+        )
+      }
+    </>
   );
 }
 

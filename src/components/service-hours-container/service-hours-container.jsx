@@ -1,9 +1,9 @@
 import React from 'react';
 import ServiceHourCard from '../service-hour-card/service-hour-card';
-import './service-hours.scss';
+import './service-hours-container.scss';
 
 
-const ServiceHoursList = () => {
+const ServiceHoursContainer = () => {
 
   const data = [
     {
@@ -34,4 +34,4 @@ const ServiceHoursList = () => {
   );
 }
 
-export default ServiceHoursList;
+export default ServiceHoursContainer;
